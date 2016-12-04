@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-	<title>Duluth Instant Messenger Champ</title>
+	<title>Duluth Instant Messenger</title>
 	<link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -10,7 +10,7 @@
 		<ul>
 			<li><label for="room">Enter/Create Room: </label><input type="text" name="room" placeholder="Top-Secret-Room-Name"></li>
 			<li><label for="username">Enter Username: </label><input type="text" name="username" placeholder="Enter Alias"></li>
-		</ul>	
+		</ul>
 	</nav>
 	<div id="MessageContainer">
 		<div id="messages">

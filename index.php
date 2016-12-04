@@ -6,15 +6,15 @@
 </head>
 <body>
 	<h1 id="title">Duluth Instant Messenger</h1>
-	<nav id="navigation">
-                <form action="./index.php" method="POST">
+        <form action="./index.php" method="POST">
+	    <nav id="navigation">
 		<ul>
 			<li><label for="room">Enter/Create Room: </label><input type="text" name="room" placeholder="Top-Secret-Room-Name"></li>
 			<li><label for="username">Enter Username: </label><input type="text" name="username" placeholder="Enter Alias"></li>
                         <li><input type="submit" value="Join Room"></li>
 		</ul>
-                </form>
-	</nav>
+            </nav>
+       </form>
 	<div id="MessageContainer">
 		<div id="messages">
 			{{Messages}}

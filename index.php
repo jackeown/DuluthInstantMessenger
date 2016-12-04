@@ -1,3 +1,28 @@
+<?php
+session_start();
+
+if(isset($_POST["room"])){
+	$_SESSION["room"] = $_POST["room"];
+	$room = $_POST["room"];
+}
+else if($_SESSION["room"]){
+	$room = $_SESSION["room"];
+}
+
+
+
+if(isset($_POST["user"])){
+	$_SESSION["user"] = $_POST["user"];
+	$user = $_POST["user"];
+}
+else if($_SESSION["user"]){
+	$user = $_SESSION["user"];
+}
+
+
+?>
+
+
 <!doctype html>
 <html>
 <head>
@@ -10,11 +35,17 @@
 	    <nav id="navigation">
 		<ul>
 			<li><label for="room">Enter/Create Room: </label><input type="text" name="room" placeholder="Top-Secret-Room-Name"></li>
-			<li><label for="username">Enter Username: </label><input type="text" name="username" placeholder="Enter Alias"></li>
-                        <li><input type="submit" value="Join Room"></li>
+			<li><label for="user">Enter Username: </label><input type="text" name="user" placeholder="Enter Alias"></li>
+			<li><input type="submit" value="Join Room"></li>
 		</ul>
             </nav>
        </form>
+	<?php
+		if(isset($_COOKIE['user'])){
+			echo "<h2>".$user."@".$room."</h2>";
+		}
+
+	?>
 	<div id="MessageContainer">
 		<div id="messages">
 			{{Messages}}

@@ -30,6 +30,7 @@ else if($_SESSION["user"]){
 	<link rel="stylesheet" href="style.css" />
 </head>
 <body>
+	<iframe width="0" height="0" border="0" name="dummyframe" id="dummyframe" style="position:absolute;top:-100px;left:-100px;"></iframe>
 	<h1 id="title">Duluth Instant Messenger</h1>
         <form action="./index.php" method="POST">
 	    <nav id="navigation">
@@ -52,7 +53,9 @@ else if($_SESSION["user"]){
 		</div>
 	</div>
 	<br>
-	<form action="">
+	<form action="addMessage.php" method="POST" target="dummyframe">
+		<input type="hidden" name="user" value="<?php echo $user; ?>">
+		<input type="hidden" name="room" value="<?php echo $room; ?>">
 		<input type="text" name="message" placeholder="enter message">
 		<input type="submit" value="Send">
 	</form>

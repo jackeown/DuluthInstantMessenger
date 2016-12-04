@@ -1,7 +1,7 @@
 <?php
-	if(isset($_POST["room"])){
-		$room = $_POST["room"];
-		$messages = "";
+	if(isset($_REQUEST["room"])){
+		$room = "rooms/".$_REQUEST["room"];
+		echo file_get_contents($room);
 		
 	}
 
